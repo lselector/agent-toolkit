@@ -6,11 +6,6 @@ pages in Open Knowledge Format (OKF). Agents search it
 with find and grep. People browse it as a local
 Wikipedia-style site.
 
-The design follows the context wikis in
-`~/Documents/GitHub/context-wiki/` and
-`~/Documents/GitHub/infra_book/`, made generic so it
-works in any repo.
-
 ## Pieces
 
 | Piece | Where |
@@ -48,10 +43,10 @@ Dependencies: `wiki_server.py` imports `wiki_pages.py`;
 ## Quick start
 
 ```bash
-cd ~/Documents/GitHub/myproject
+cd /path/to/myproject
 python3 ~/.claude/wiki/wiki_tools.py init
 python3 ~/.claude/wiki/wiki_tools.py check
-~/.claude/wiki/server_start.sh       # http://localhost:8020
+~/.claude/wiki/server_start.sh       # http://localhost:4747
 ~/.claude/wiki/server_stop.sh
 ```
 
@@ -66,12 +61,12 @@ repo root. With no wiki yet, `init` creates
 `<repo root>/wiki`. Set `WIKI_ROOT=/path/to/wiki` to
 point anywhere else, including older wikis with the
 same layout under another name, for example
-`WIKI_ROOT=~/Documents/GitHub/infra_book/Context-Wiki-Infra`.
+`WIKI_ROOT=/path/to/myproject/Context-Wiki`.
 
 ## Web UI
 
 `server_start.sh [wiki_dir]` starts `wiki_server.py` in
-the background on port 8020. Set `PORT=8021` to run a
+the background on port 4747. Set `PORT=4748` to run a
 second project's wiki at the same time. Starting on a
 port that already runs a wiki server restarts it.
 A port held by any other program is left alone, and

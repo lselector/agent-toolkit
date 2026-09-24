@@ -3,18 +3,18 @@
 #
 # Usage:
 #   ~/.claude/wiki/server_start.sh [wiki_dir]
-#   PORT=8021 ~/.claude/wiki/server_start.sh
+#   PORT=4748 ~/.claude/wiki/server_start.sh
 #   PYTHON=/path/to/python ~/.claude/wiki/server_start.sh
 #
 # wiki_dir defaults to the nearest wiki/ folder above the
-# current directory. Port defaults to 8020. If a wiki
+# current directory. Port defaults to 4747. If a wiki
 # server started by these scripts already holds the port,
 # it is stopped first, so start doubles as restart. A port
 # held by any other program is left alone.
 # PID and log files: ~/.claude/wiki/run/<port>.{pid,log}
 
 HERE="$(cd "$(dirname "$0")" && pwd)"
-PORT="${PORT:-8020}"
+PORT="${PORT:-4747}"
 RUN="$HERE/run"
 PIDFILE="$RUN/$PORT.pid"
 LOGFILE="$RUN/$PORT.log"
@@ -63,7 +63,7 @@ PORT="$PORT" "$HERE/server_stop.sh" --quiet
 
 if lsof -ti "tcp:$PORT" -sTCP:LISTEN > /dev/null 2>&1; then
     echo "Port $PORT is used by another program."
-    echo "See: lsof -i :$PORT   Or try: PORT=8021 $0"
+    echo "See: lsof -i :$PORT   Or try: PORT=4748 $0"
     exit 1
 fi
 

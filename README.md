@@ -35,13 +35,14 @@ dot_claude/
 
 | Command | What it does |
 |---|---|
+| `/repo-init` | Sets up a project: `.gitignore`, `README.md`, `CLAUDE.md` (via `/init`) and the wiki. |
 | `/lean-change` | Adds a feature without bloat, then tidies the diff. |
 | `/architecture-review` | Reviews the whole codebase and writes ranked refactoring advice to `docs/`. |
 | `/design-doc` | Writes and refines an architecture design document, with PDF output. |
 | `/humanize` | Writes or rewrites English and Russian prose so it does not read as AI-made. |
 | `/wiki-init` | Creates a project wiki and seeds its first pages. |
 | `/wiki-update` | Files new knowledge into the wiki, fixes links, rebuilds the index. |
-| `/wiki-serve` | Starts the wiki web UI on http://localhost:8020. |
+| `/wiki-serve` | Starts the wiki web UI on http://localhost:4747. |
 | `/wiki-stop` | Stops the wiki web UI. |
 
 ## Scripts

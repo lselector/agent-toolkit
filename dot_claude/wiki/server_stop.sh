@@ -1,16 +1,16 @@
 #!/bin/bash
-# Stop the wiki web server on a port (default 8020).
+# Stop the wiki web server on a port (default 4747).
 #
 # Usage:
 #   ~/.claude/wiki/server_stop.sh [--quiet]
-#   PORT=8021 ~/.claude/wiki/server_stop.sh
+#   PORT=4748 ~/.claude/wiki/server_stop.sh
 #
 # Kills only processes running wiki_server.py: first the
 # recorded pid, then any wiki_server.py listening on the
 # port. Other programs on the port are never touched.
 
 HERE="$(cd "$(dirname "$0")" && pwd)"
-PORT="${PORT:-8020}"
+PORT="${PORT:-4747}"
 PIDFILE="$HERE/run/$PORT.pid"
 QUIET="$1"
 

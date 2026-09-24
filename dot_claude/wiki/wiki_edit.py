@@ -54,7 +54,7 @@ The tools live outside the repo, in `~/.claude/wiki/`:
 
 ```bash
 python3 ~/.claude/wiki/wiki_tools.py check
-~/.claude/wiki/server_start.sh     # http://localhost:8020
+~/.claude/wiki/server_start.sh     # http://localhost:4747
 ```
 """
 

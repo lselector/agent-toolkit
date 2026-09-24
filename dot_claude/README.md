@@ -13,6 +13,7 @@ dot_claude/
 │   ├── lean-change/ # /lean-change
 │   ├── design-doc/  # /design-doc
 │   ├── humanize/    # /humanize
+│   ├── repo-init/   # /repo-init
 │   ├── wiki-init/   # /wiki-init
 │   ├── wiki-update/ # /wiki-update
 │   ├── wiki-serve/  # /wiki-serve

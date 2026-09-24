@@ -212,7 +212,7 @@ python3 $T backlinks "Stripe"           # who links here
 | `wiki_tools.py index` | rebuild `Dashboards/Index.md` |
 | `wiki_tools.py log "text"` | add a dated log line |
 | `wiki_tools.py find/grep/read/backlinks` | search |
-| `server_start.sh` / `server_stop.sh` | web UI on port 8020 |
+| `server_start.sh` / `server_stop.sh` | web UI on port 4747 |
 
 `check` errors: missing folder, page without `type`,
 duplicate page name. Warnings: dangling link, orphan

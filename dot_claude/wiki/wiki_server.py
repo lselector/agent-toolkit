@@ -12,7 +12,7 @@ the generated Dashboards/Index.md.
 
 Usage:
     python wiki_server.py [wiki_dir]    # default: search
-    PORT=8021 python wiki_server.py     # default 8020
+    PORT=4748 python wiki_server.py     # default 4747
     # background control scripts, same folder:
     server_start.sh [wiki_dir] / server_stop.sh
     server_restart.sh
@@ -40,7 +40,7 @@ HERE = Path(__file__).resolve().parent
 ROOT = wp.get_root(sys.argv[1] if len(sys.argv) > 1
                    else None)
 RAW = ROOT / "Raw"
-PORT = int(os.environ.get("PORT", "8020"))
+PORT = int(os.environ.get("PORT", "4747"))
 TITLE = f"{wp.project_name(ROOT)} wiki"
 PINNED = ["Home", "Index", "Topics", "Log"]
 MD_EXTS = ["tables", "fenced_code", "sane_lists"]
